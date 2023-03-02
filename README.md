@@ -2,7 +2,8 @@
 111062613 蔡鎮宇
 
 # Part 1. Image Alignment with RANSAC
-
+- A. (25%)UseOpenCVfunctionorpubliclyavailableprogram(suchastheonefromhttp://www.vlfeat.org/) for SIFT interest point detection to extract the SIFT feature points from the above 4 images. Establish point correspondences between the SIFT feature points detected from the single-book images and the cluttered-book image by using the distance between the SIFT feature vectors as the matching score. Show your best point correspondence results with different distance thresholds (the number of correspondences should be larger than 500).
+- B. (25%)ApplytheRANSACprograminproblem1tofindthebestmatchinghomographytransformation between each single-book image and the input image by using the SIFT features computed from problem 1. Show the detection result by showing the deviation vectors between the transformed feature points and the corresponding feature points on the input image. You may need to try different parameter setting in RANSAC to find the best matching result. Compare the parameter settings in SIFT feature and RANSAC and discuss the result.
 ## a. 
 `sift_img_concatenate` 利用作業2的SIFT來計算兩張圖的interest point，把兩張的圖片的大小(y軸)對齊後用`plot_matches`畫出對應的點和線。
 
@@ -15,6 +16,13 @@
 最後用`plot_deviation_vector`畫出來
 
 # Part 2. Image segmentation:
+- A. (10 pts) Apply K-means on the image (RGB color space) and try it with three different K values (your K should be > 3) and show the results (3 images). You should use 50 random initial guesses to select the best result based on the objective function for each K. Please discuss the difference between the results for different K’s.
+- B. (10 pts) Implement K-means++ to have better initial guess (3 images). Please discuss the difference between (A) and (B).
+- C. (10 pts) Implement the mean-shift algorithm to segment the same colors in the target image. Select appropriate parameters in the Uniform Kernel on the RGB color space to achieve optimal image segmentation (show the clustered result), and then show the pixel distributions in the R*G*B feature space before and after applying mean-shift (see Unit7 p.31). (3 images)
+- D. (10 pts) In addition, combine the color and spatial information into the kernel for mean shift segmentation and find the optimal parameters for the best segmentation result. (1 image)
+- E. (10 pts) Show the mean-shift segmentation results with three different sets of bandwidth parameters. Discuss the segmentation results for different bandwidth parameters. (3 images)
+- F. (Bonus 10pts) Compare the segmentation results by using K-means and mean-shift algorithms and their computational cost.
+
 ## a.
 
 `k_means`
