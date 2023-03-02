@@ -1,5 +1,4 @@
 # CV_hw3
-111062613 蔡鎮宇
 
 # Part 1. Image Alignment with RANSAC
 - A. (25%)UseOpenCVfunctionorpubliclyavailableprogram(suchastheonefromhttp://www.vlfeat.org/) for SIFT interest point detection to extract the SIFT feature points from the above 4 images. Establish point correspondences between the SIFT feature points detected from the single-book images and the cluttered-book image by using the distance between the SIFT feature vectors as the matching score. Show your best point correspondence results with different distance thresholds (the number of correspondences should be larger than 500).
